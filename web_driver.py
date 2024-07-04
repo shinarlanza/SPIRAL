@@ -29,8 +29,5 @@ class inflow():
         if text=='':
             text = wait.until(EC.visibility_of_element_located((By.XPATH,'//*[@id="mw-content-text"]/div[1]/p[3]'))).text
         text = re.sub("[\(\[].*?[\)\]]", "", text)
-        print(text)
+        return(text)
         
-
-assist = inflow()
-assist.search_wikipedia("Banana")
